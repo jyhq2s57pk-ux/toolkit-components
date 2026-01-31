@@ -34,6 +34,22 @@ export const colors = {
     pink: '#ec4899',
     yellow: '#facc15',
   },
+
+  // Semantic colors for feedback and status
+  semantic: {
+    error: '#ef4444',
+    success: '#22c55e',
+    warning: '#f59e0b',
+    info: '#3b82f6',
+  },
+
+  // State colors for interactive elements
+  states: {
+    disabled: 'rgba(255, 255, 255, 0.3)',
+    hover: 'rgba(255, 255, 255, 0.04)',
+    focus: 'rgba(255, 255, 255, 0.1)',
+    active: 'rgba(255, 255, 255, 0.08)',
+  },
 } as const;
 
 export type ColorToken = typeof colors;

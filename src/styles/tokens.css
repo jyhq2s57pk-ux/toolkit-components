@@ -1,0 +1,136 @@
+/**
+ * Toolkit Components - Design Token CSS Custom Properties
+ *
+ * AUTO-GENERATED FILE - DO NOT EDIT DIRECTLY
+ * Run `npm run generate:tokens` to regenerate from TypeScript tokens.
+ *
+ * Usage: var(--tk-color-bg-primary)
+ */
+
+:root {
+  /* Background Colors */
+  --tk-color-bg-primary: #000000;
+  --tk-color-bg-card: #191919;
+  --tk-color-bg-card-secondary: #363636;
+  --tk-color-bg-card-hover: rgba(255, 255, 255, 0.04);
+  --tk-color-bg-thumbnail: #c6e6f8;
+
+  /* Text Colors */
+  --tk-color-text-primary: #f7f7f7;
+  --tk-color-text-secondary: #8f8f8f;
+  --tk-color-text-muted: rgba(255, 255, 255, 0.6);
+
+  /* Interactive Colors */
+  --tk-color-button-bg: #000000;
+  --tk-color-button-hover-bg: #191919;
+
+  /* Accent Colors */
+  --tk-color-accent-green: #4ade80;
+  --tk-color-accent-orange: #f97316;
+  --tk-color-accent-cyan: #22d3ee;
+  --tk-color-accent-pink: #ec4899;
+  --tk-color-accent-yellow: #facc15;
+
+  /* Semantic Colors */
+  --tk-color-error: #ef4444;
+  --tk-color-success: #22c55e;
+  --tk-color-warning: #f59e0b;
+  --tk-color-info: #3b82f6;
+
+  /* State Colors */
+  --tk-color-state-disabled: rgba(255, 255, 255, 0.3);
+  --tk-color-state-hover: rgba(255, 255, 255, 0.04);
+  --tk-color-state-focus: rgba(255, 255, 255, 0.1);
+  --tk-color-state-active: rgba(255, 255, 255, 0.08);
+
+  /* Spacing */
+  --tk-space-0: 0;
+  --tk-space-1: 0.25rem;
+  --tk-space-2: 0.5rem;
+  --tk-space-3: 0.75rem;
+  --tk-space-4: 1rem;
+  --tk-space-5: 1.25rem;
+  --tk-space-6: 1.5rem;
+  --tk-space-8: 2rem;
+  --tk-space-10: 2.5rem;
+  --tk-space-12: 3rem;
+  --tk-space-16: 4rem;
+
+  /* Border Radius */
+  --tk-radius-none: 0;
+  --tk-radius-sm: 0.25rem;
+  --tk-radius-md: 0.5rem;
+  --tk-radius-lg: 1rem;
+  --tk-radius-xl: 1.5rem;
+  --tk-radius-full: 9999px;
+
+  /* Typography - Font Family */
+  --tk-font-sans: Inter, system-ui, sans-serif;
+
+  /* Typography - Font Size */
+  --tk-text-xs: 0.75rem;
+  --tk-text-sm: 0.875rem;
+  --tk-text-base: 1rem;
+  --tk-text-lg: 1.125rem;
+  --tk-text-xl: 1.25rem;
+  --tk-text-2xl: 1.5rem;
+  --tk-text-3xl: 1.875rem;
+
+  /* Typography - Font Weight */
+  --tk-font-normal: 400;
+  --tk-font-medium: 500;
+  --tk-font-semibold: 600;
+  --tk-font-bold: 700;
+
+  /* Typography - Line Height */
+  --tk-leading-tight: 1.25;
+  --tk-leading-snug: 1.375;
+  --tk-leading-normal: 1.5;
+  --tk-leading-relaxed: 1.625;
+
+  /* Shadows */
+  --tk-shadow-none: none;
+  --tk-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --tk-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --tk-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+  --tk-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.3);
+  --tk-shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.4);
+  --tk-shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  /* Animation Duration */
+  --tk-duration-instant: 0ms;
+  --tk-duration-fast: 150ms;
+  --tk-duration-normal: 200ms;
+  --tk-duration-slow: 300ms;
+  --tk-duration-slower: 500ms;
+
+  /* Animation Easing */
+  --tk-ease-linear: linear;
+  --tk-ease-ease: ease;
+  --tk-ease-easeIn: ease-in;
+  --tk-ease-easeOut: ease-out;
+  --tk-ease-easeInOut: ease-in-out;
+
+  /* Border Width */
+  --tk-border-none: 0;
+  --tk-border-thin: 1px;
+  --tk-border-medium: 2px;
+  --tk-border-thick: 4px;
+
+  /* Z-Index */
+  --tk-z-hide: -1;
+  --tk-z-base: 0;
+  --tk-z-dropdown: 10;
+  --tk-z-sticky: 20;
+  --tk-z-overlay: 30;
+  --tk-z-modal: 40;
+  --tk-z-popover: 50;
+  --tk-z-tooltip: 60;
+
+  /* Breakpoints */
+  --tk-screen-sm: 640px;
+  --tk-screen-md: 768px;
+  --tk-screen-lg: 1024px;
+  --tk-screen-xl: 1280px;
+  --tk-screen-2xl: 1536px;
+}

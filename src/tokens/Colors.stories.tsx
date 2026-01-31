@@ -97,6 +97,13 @@ export const AllColors: Story = {
         <ColorSwatch name="Pink" value={colors.accent.pink} />
         <ColorSwatch name="Yellow" value={colors.accent.yellow} />
       </ColorSection>
+
+      <ColorSection title="Semantic Colors">
+        <ColorSwatch name="Error" value={colors.semantic.error} />
+        <ColorSwatch name="Success" value={colors.semantic.success} />
+        <ColorSwatch name="Warning" value={colors.semantic.warning} />
+        <ColorSwatch name="Info" value={colors.semantic.info} />
+      </ColorSection>
     </div>
   ),
 };
@@ -159,6 +166,111 @@ export const AccentColors: Story = {
         <ColorSwatch name="Cyan" value={colors.accent.cyan} />
         <ColorSwatch name="Pink" value={colors.accent.pink} />
         <ColorSwatch name="Yellow" value={colors.accent.yellow} />
+      </ColorSection>
+    </div>
+  ),
+};
+
+/**
+ * Semantic colors for feedback and status messages
+ */
+export const SemanticColors: Story = {
+  render: () => (
+    <div style={{ padding: '40px' }}>
+      <ColorSection title="Semantic Colors">
+        <ColorSwatch name="Error" value={colors.semantic.error} />
+        <ColorSwatch name="Success" value={colors.semantic.success} />
+        <ColorSwatch name="Warning" value={colors.semantic.warning} />
+        <ColorSwatch name="Info" value={colors.semantic.info} />
+      </ColorSection>
+    </div>
+  ),
+};
+
+/**
+ * State colors for interactive element states
+ */
+export const StateColors: Story = {
+  render: () => (
+    <div style={{ padding: '40px' }}>
+      <ColorSection title="State Colors">
+        <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <div
+              style={{
+                width: '120px',
+                height: '80px',
+                backgroundColor: colors.states.disabled,
+                borderRadius: '12px',
+              }}
+            />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+              <span style={{ color: '#f7f7f7', fontSize: '14px', fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>
+                Disabled
+              </span>
+              <span style={{ color: '#8f8f8f', fontSize: '12px', fontFamily: 'Inter, sans-serif' }}>
+                {colors.states.disabled}
+              </span>
+            </div>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <div
+              style={{
+                width: '120px',
+                height: '80px',
+                backgroundColor: colors.states.hover,
+                borderRadius: '12px',
+                border: '1px solid #363636',
+              }}
+            />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+              <span style={{ color: '#f7f7f7', fontSize: '14px', fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>
+                Hover
+              </span>
+              <span style={{ color: '#8f8f8f', fontSize: '12px', fontFamily: 'Inter, sans-serif' }}>
+                {colors.states.hover}
+              </span>
+            </div>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <div
+              style={{
+                width: '120px',
+                height: '80px',
+                backgroundColor: colors.states.focus,
+                borderRadius: '12px',
+                border: '1px solid #363636',
+              }}
+            />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+              <span style={{ color: '#f7f7f7', fontSize: '14px', fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>
+                Focus
+              </span>
+              <span style={{ color: '#8f8f8f', fontSize: '12px', fontFamily: 'Inter, sans-serif' }}>
+                {colors.states.focus}
+              </span>
+            </div>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <div
+              style={{
+                width: '120px',
+                height: '80px',
+                backgroundColor: colors.states.active,
+                borderRadius: '12px',
+                border: '1px solid #363636',
+              }}
+            />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+              <span style={{ color: '#f7f7f7', fontSize: '14px', fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>
+                Active
+              </span>
+              <span style={{ color: '#8f8f8f', fontSize: '12px', fontFamily: 'Inter, sans-serif' }}>
+                {colors.states.active}
+              </span>
+            </div>
+          </div>
+        </div>
       </ColorSection>
     </div>
   ),

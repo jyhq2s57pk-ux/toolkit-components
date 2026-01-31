@@ -5,6 +5,12 @@ import {
   LockIcon,
   ChevronRightIcon,
   ChevronLeftIcon,
+  ChevronDownIcon,
+  ChevronUpIcon,
+  SearchIcon,
+  MenuIcon,
+  CloseIcon,
+  LinkIcon,
 } from './Icons';
 
 const meta: Meta = {
@@ -55,7 +61,7 @@ const IconWrapper: React.FC<{ children: React.ReactNode; label: string }> = ({
  */
 export const AllIcons: Story = {
   render: () => (
-    <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap', padding: '20px' }}>
+    <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap', padding: '20px', maxWidth: '600px' }}>
       <IconWrapper label="ArrowRight">
         <ArrowRightIcon className="text-white w-6 h-5" />
       </IconWrapper>
@@ -70,6 +76,24 @@ export const AllIcons: Story = {
       </IconWrapper>
       <IconWrapper label="ChevronLeft">
         <ChevronLeftIcon className="text-white w-6 h-6" />
+      </IconWrapper>
+      <IconWrapper label="ChevronDown">
+        <ChevronDownIcon className="text-white w-6 h-6" />
+      </IconWrapper>
+      <IconWrapper label="ChevronUp">
+        <ChevronUpIcon className="text-white w-6 h-6" />
+      </IconWrapper>
+      <IconWrapper label="Search">
+        <SearchIcon className="text-white w-5 h-5" />
+      </IconWrapper>
+      <IconWrapper label="Menu">
+        <MenuIcon className="text-white w-6 h-5" />
+      </IconWrapper>
+      <IconWrapper label="Close">
+        <CloseIcon className="text-white w-5 h-5" />
+      </IconWrapper>
+      <IconWrapper label="Link">
+        <LinkIcon className="text-white w-5 h-5" />
       </IconWrapper>
     </div>
   ),
@@ -102,6 +126,12 @@ export const Chevrons: Story = {
       </IconWrapper>
       <IconWrapper label="ChevronRight">
         <ChevronRightIcon className="text-white w-6 h-6" />
+      </IconWrapper>
+      <IconWrapper label="ChevronUp">
+        <ChevronUpIcon className="text-white w-6 h-6" />
+      </IconWrapper>
+      <IconWrapper label="ChevronDown">
+        <ChevronDownIcon className="text-white w-6 h-6" />
       </IconWrapper>
     </div>
   ),
@@ -172,6 +202,28 @@ export const IconSizes: Story = {
         <ArrowRightIcon className="text-white" style={{ width: '48px', height: '42px' }} />
         <span style={{ color: '#8f8f8f', fontSize: '12px' }}>48px</span>
       </div>
+    </div>
+  ),
+};
+
+/**
+ * Utility icons - Search, Menu, Close, Link
+ */
+export const UtilityIcons: Story = {
+  render: () => (
+    <div style={{ display: 'flex', gap: '32px', padding: '20px' }}>
+      <IconWrapper label="Search">
+        <SearchIcon className="text-white w-5 h-5" />
+      </IconWrapper>
+      <IconWrapper label="Menu">
+        <MenuIcon className="text-white w-6 h-5" />
+      </IconWrapper>
+      <IconWrapper label="Close">
+        <CloseIcon className="text-white w-5 h-5" />
+      </IconWrapper>
+      <IconWrapper label="Link">
+        <LinkIcon className="text-white w-5 h-5" />
+      </IconWrapper>
     </div>
   ),
 };
