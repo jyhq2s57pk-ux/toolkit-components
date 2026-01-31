@@ -4,6 +4,7 @@ node_modules/
 # Build
 dist/
 build/
+storybook-static/
 
 # IDE
 .idea/
@@ -23,3 +24,9 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# Storybook
+*storybook.log
+
+# Package lock (use npm ci in CI)
+package-lock.json
