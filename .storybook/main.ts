@@ -17,6 +17,13 @@ const config: StorybookConfig = {
   typescript: {
     reactDocgen: 'react-docgen-typescript',
   },
+  viteFinal: async (config) => {
+    // Set base path for GitHub Pages deployment
+    if (process.env.NODE_ENV === 'production') {
+      config.base = '/toolkit-components/';
+    }
+    return config;
+  },
 };
 
 export default config;

@@ -27,6 +27,3 @@ npm-debug.log*
 
 # Storybook
 *storybook.log
-
-# Package lock (use npm ci in CI)
-package-lock.json
