@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Toolkit - Feature Cards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'card-bg': '#191919',
+            'card-text': '#f7f7f7',
+            'card-description': '#8f8f8f',
+            'card-thumbnail': '#c6e6f8',
+          },
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    .feature-card { transition: all 0.2s ease; }
+    .feature-card:hover { background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.04) 100%), linear-gradient(90deg, rgb(25, 25, 25) 0%, rgb(25, 25, 25) 100%); }
+    .feature-card:hover .arrow-btn { background-color: #191919; }
+    .arrow-btn { transition: background-color 0.2s ease; }
+  </style>
+</head>
+<body class="min-h-screen bg-black p-8">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-white text-3xl font-semibold mb-8 font-inter">Feature Cards</h1>
+    <section class="mb-12">
+      <h2 class="text-white/60 text-sm uppercase tracking-wider mb-4 font-inter">Default Size</h2>
+      <div class="flex flex-col gap-4" id="default-cards"></div>
+    </section>
+    <section>
+      <h2 class="text-white/60 text-sm uppercase tracking-wider mb-4 font-inter">Compact Size</h2>
+      <div class="flex flex-col gap-4" id="compact-cards"></div>
+    </section>
+  </div>
+  <script>
+    const assets = { iconography: "https://www.figma.com/api/mcp/asset/1d030b7c-331c-4f10-b265-9e1a3d42688e", color: "https://www.figma.com/api/mcp/asset/a4456c16-f29e-43aa-9794-b55a75807a0d", typography: "https://www.figma.com/api/mcp/asset/dd18fe7b-5044-4a22-8722-3153a169ba7f", composition: "https://www.figma.com/api/mcp/asset/aed00c5f-53b4-48ef-a28d-89f5775a2018", photography: "https://www.figma.com/api/mcp/asset/7dc92347-5902-41c7-9bb8-f78d79b3605a" };
+    const variants = [{ id: 'iconography', title: 'Iconography', description: 'Learn how to use our iconography across product and marketing applications.', image: assets.iconography }, { id: 'color', title: 'Color', description: 'Learn how to use our color across product and marketing applications.', image: assets.color }, { id: 'typography', title: 'Typography', description: 'Learn how to use our typography across product and marketing applications.', image: assets.typography }, { id: 'composition', title: 'Composition', description: 'Learn how to build layouts across product and marketing applications.', image: assets.composition }, { id: 'photography', title: 'Photography', description: 'Learn how to use our photography across product and marketing applications.', image: assets.photography }];
+    function createFeatureCard(v, c) { const d = document.createElement('div'); d.className = 'feature-card flex items-center gap-4 bg-card-bg rounded-2xl overflow-hidden cursor-pointer pl-4 pr-6 py-4'; d.innerHTML = '<div class="bg-card-thumbnail rounded-2xl overflow-hidden flex-shrink-0 flex items-center justify-center w-[104px] h-[104px]"><img src="'+v.image+'" alt="'+v.title+'" class="w-full h-full object-cover"/></div><div class="flex-1 flex flex-col gap-2 pr-2 min-w-0"><h3 class="font-inter font-semibold text-card-text '+(c?'text-base leading-6':'text-xl leading-7')+'">'+v.title+'</h3><p class="font-inter font-normal text-card-description leading-5 '+(c?'text-sm line-clamp-3':'text-sm')+'">'+v.description+'</p></div><div class="arrow-btn flex items-center justify-center rounded-full flex-shrink-0 w-12 h-12 bg-black"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>'; return d; }
+    const dc = document.getElementById('default-cards'), cc = document.getElementById('compact-cards');
+    variants.forEach(v => { dc.appendChild(createFeatureCard(v, false)); cc.appendChild(createFeatureCard(v, true)); });
+  </script>
+</body>
+</html>
