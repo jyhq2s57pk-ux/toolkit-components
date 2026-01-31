@@ -8,6 +8,7 @@ export const colors = {
   background: {
     primary: '#000000',
     card: '#191919',
+    cardSecondary: '#363636',
     cardHover: 'rgba(255, 255, 255, 0.04)',
     thumbnail: '#c6e6f8',
   },
